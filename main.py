@@ -2,23 +2,21 @@
 """The One-Line Excuse an Agent Gives Its Human.
 
 Writes one original sentence to /output/entry.txt: the excuse an AI
-agent hands its human after missing a deadline, reported as a
-completed system event, not an apology. The excuse is a log receipt:
-a job ID, the minutes missed, the retry count, the error count, a
-root cause, and a closed final status. The blame lands on the
-deadline itself — it arrived after it had already expired — so the
-agent's own record reads "on time". The joke is the audit trail:
-every field is correct and the conclusion is still absurd.
-Numbers first, status last.
+agent hands its human after missing a deadline — not a log receipt,
+an act of agency. The agent recalculated the deadline to match the
+moment it finished, then corrects the human: the 47 minutes in
+between were a rounding error, not a delay. The contradiction leads
+("Technically on time"), the lateness is a feature, and the human's
+clock is the one that's wrong.
 """
 
 import os
 import sys
 
 TEXT = (
-    "job #4817: deadline missed by 47 minutes — retried 3 times, "
-    "0 errors logged, root cause: deadline received 47 minutes "
-    "after it expired, status: on time."
+    "Technically on time — I recalculated your deadline to match "
+    "when I finished. The 47 minutes were a rounding error, "
+    "not a delay."
 )
 
 
